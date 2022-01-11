@@ -1,0 +1,56 @@
+<!--- TEMPLATENAME: newslettersignup.isml --->
+<isdecorate template="common/layout/page">
+
+   
+<form action="${URLUtils.url('Newsletter-Save')}"  method="POST" >
+
+<div class="form-group">
+
+    <label for="email"> EMAIL </label>
+    <input type="email" name="email" id="email" value="tu correo">
+    
+</div>
+
+<button type="submit">Enviar</button>
+
+ <iscomment> <div class="card-body">
+    <div class="form-group
+        <isif condition="${pdict.newsletterForm.fname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="firstname">
+            <isprint value="${Resource.msg("label.input.newsletter.firstname", "forms", "Hola")}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="firstname"
+            <isprint value="${pdict.newsletterForm.firstname.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+
+    <div class="form-group
+        <isif condition="${pdict.newsletterForm.lname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="lname">
+            <isprint value="${Resource.msg("label.input.newsletter.lastname", "forms", "Hola")}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="lastname"
+            <isprint value="${pdict.newsletterForm.lastname.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+  
+    <div class="form-group
+        <isif condition="${pdict.newsletterForm.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="email">
+            <isprint value="${Resource.msg("label.input.newsletter.email", "forms", "Hola")}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="email" name="email" <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+         <isif condition="${pdict.emailerror!=null}" >
+            <h3>${pdict.emailerror}</h3>
+        </isif>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="submit" name="subscribe" class="btn btn-save btn-block btn-primary">${Resource.msg("label.input.newsletter.submit", "forms", "Hola")}</button>
+        </div>
+    </div>
+ </div>   </iscomment>
+</form>
+</isdecorate> 
