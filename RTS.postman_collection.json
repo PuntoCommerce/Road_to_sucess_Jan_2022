@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "2c30ee88-0899-401f-9925-78124377aa56",
+		"name": "RTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Access Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "http://www.sitegenesis.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://account.demandware.com/dw/oauth2/access_token",
+					"protocol": "https",
+					"host": [
+						"account",
+						"demandware",
+						"com"
+					],
+					"path": [
+						"dw",
+						"oauth2",
+						"access_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-dw-client-id",
+						"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer _SgOgnbzAiI1LnuBHjScKPwtxcI",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "http://www.sitegenesis.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://zzte-013.sandbox.us02.dx.commercecloud.salesforce.com/s/RefArch/dw/shop/v20_9/products/008884304016M",
+					"protocol": "https",
+					"host": [
+						"zzte-013",
+						"sandbox",
+						"us02",
+						"dx",
+						"commercecloud",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"s",
+						"RefArch",
+						"dw",
+						"shop",
+						"v20_9",
+						"products",
+						"008884304016M"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-dw-client-id",
+						"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer _SgOgnbzAiI1LnuBHjScKPwtxcI",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "http://www.sitegenesis.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://zzte-013.sandbox.us02.dx.commercecloud.salesforce.com/s/RefArch/dw/shop/v20_9/product_search?q=Shoes",
+					"protocol": "https",
+					"host": [
+						"zzte-013",
+						"sandbox",
+						"us02",
+						"dx",
+						"commercecloud",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"s",
+						"RefArch",
+						"dw",
+						"shop",
+						"v20_9",
+						"product_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Shoes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer tk6L6Y4MpCtb_jFVsHuoP4g7Pq8",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "http://www.sitegenesis.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://zzte-013.sandbox.us02.dx.commercecloud.salesforce.com/s/Sites-Site/dw/data/v20_9/customer_lists/RefArch/customers/00000001",
+					"protocol": "https",
+					"host": [
+						"zzte-013",
+						"sandbox",
+						"us02",
+						"dx",
+						"commercecloud",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"s",
+						"Sites-Site",
+						"dw",
+						"data",
+						"v20_9",
+						"customer_lists",
+						"RefArch",
+						"customers",
+						"00000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer A0WXnRadp9BIio9lGvSWAJEgwRA",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "http://www.sitegenesis.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"birthday\": \"1997-02-15\",\r\n  \"company_name\": \"Punto Commerce\",\r\n  \"email\": \"alex@puntocommerce.com\",\r\n  \"first_name\": \"Alejandro\",\r\n  \"gender\": 1,\r\n  \"last_name\": \"Monge\",\r\n  \"preferred_locale\": \"es_MX\",\r\n  \"credentials\": {\r\n        \"enabled\": true,\r\n        \"locked\": false,\r\n        \"login\": \"alex@puntocommerce.com\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://zzte-013.sandbox.us02.dx.commercecloud.salesforce.com/s/Sites-Site/dw/data/v20_9/customer_lists/RefArch/customers/123",
+					"protocol": "https",
+					"host": [
+						"zzte-013",
+						"sandbox",
+						"us02",
+						"dx",
+						"commercecloud",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"s",
+						"Sites-Site",
+						"dw",
+						"data",
+						"v20_9",
+						"customer_lists",
+						"RefArch",
+						"customers",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
