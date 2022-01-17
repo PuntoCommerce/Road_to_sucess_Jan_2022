@@ -1,0 +1,27 @@
+{
+  "name": "Display video",
+  "description": "",
+  "group": "Custom",
+  "attribute_definition_groups": [
+    {
+      "id": "video_id",
+      "name": "Section Editorial Copy",
+      "description": "Video Description.",
+      "attribute_definitions": [
+        {
+          "id": "video_url",
+          "name": "Video script",
+          "description": "Give me the script",
+          "type": "string",
+          "required": false,
+          "searching": {
+            "searchable": true,
+            "refinable": false,
+            "boost_factor": 1.5
+          }
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

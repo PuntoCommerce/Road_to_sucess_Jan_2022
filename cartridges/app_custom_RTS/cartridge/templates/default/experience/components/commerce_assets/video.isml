@@ -1,0 +1,7 @@
+<div>
+
+  <p>
+    <video class="js-video hero__video" data-src="${pdict.video_url}" loop="" muted="" autoplay poster="//cdn.shopify.com/s/files/1/1834/9243/files/dbh-austineastciders_bloodorange_easytiger-040517-29.jpg?v=1537202407" src="${pdict.video_url}">&nbsp;</video>
+</p>
+
+</div>
